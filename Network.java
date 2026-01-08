@@ -14,10 +14,13 @@ public class Network {
         users[1] = new User("Bar");
         users[2] = new User("Baz");
         userCount = 3;
+
+        users[0].addFollowee("Bar");
+        users[2].addFollowee("Foo");
     }
 
     public int getUserCount() {
-        return this.userCount;
+        return userCount;
     }
 
     public User getUser(String name) {
