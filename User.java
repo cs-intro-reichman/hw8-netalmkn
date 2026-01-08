@@ -42,6 +42,19 @@ public class User {
         normalizeCount();
         return fCount;
     }
+    /**
+     * Returns the number of users this user follows (for testing purposes).
+     */
+    public int getfCount() {
+        return getCount();
+    }
+
+    /**
+     * Returns the follows array (for testing purposes).
+     */
+    public String[] getfFollows() {
+        return getFollows();
+    }
 
     public String toString() {
         normalizeCount();
@@ -63,6 +76,9 @@ public class User {
 
     public boolean addFollowee(String name) {
         normalizeCount();
+        if (follows(name)) { // בדיקה האם כבר עוקב אחריו
+            return false;
+        }
         if (fCount == follows.length) {
             return false;
         }
