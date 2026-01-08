@@ -15,8 +15,8 @@ public class Network {
         users[2] = new User("Baz");
         userCount = 3;
 
-        users[0].addFollowee("Bar");
-        users[2].addFollowee("Foo");
+        //users[0].addFollowee("Bar");
+        //users[2].addFollowee("Foo");
     }
 
     public int getUserCount() {
